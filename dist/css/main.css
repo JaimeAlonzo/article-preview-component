@@ -52,6 +52,8 @@ p {
   -ms-grid-rows: 40% 60%;
       grid-template-rows: 40% 60%;
   overflow: hidden;
+  -webkit-box-shadow: 0 20px 30px rgba(158, 175, 194, 0.632);
+          box-shadow: 0 20px 30px rgba(158, 175, 194, 0.632);
 }
 
 .card__image {
