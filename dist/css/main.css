@@ -10,6 +10,226 @@ html {
 }
 
 body {
+  background: #ecf2f8;
   font-family: 'Manrope', sans-serif;
+  position: relative;
+  height: 100vh;
+  font-weight: 500;
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 19% 7% 23% 7%;
+}
+
+h3, h4 {
+  font-weight: 700;
+  color: #48556a;
+}
+
+p {
+  color: #6d7f97;
+}
+
+.article-preview {
+  height: 100%;
+}
+
+.card {
+  background: #fff;
+  height: 100%;
+  border-radius: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 40% 60%;
+      grid-template-rows: 40% 60%;
+  overflow: hidden;
+}
+
+.card__image {
+  background: url(../img/drawers.jpg);
+  background-size: cover;
+}
+
+.card__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80% 20%;
+      grid-template-rows: 80% 20%;
+}
+
+.card__content h3 {
+  font-size: 1.2rem;
+}
+
+.card__content__details {
+  padding: 10%;
+  padding-bottom: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card__content__details p {
+  margin: auto 0;
+  line-height: 1.7;
+}
+
+.card__content__footer {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: 20% 50% 30%;
+      grid-template-columns: 20% 50% 30%;
+  padding: 1% 10%;
+  padding-bottom: 3%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__content__footer .avatar {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  border-radius: 100%;
+  width: 80%;
+}
+
+.card__content__footer .share-btn {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  background: #ecf2f8;
+  border: none;
+  border-radius: 100%;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  color: #6d7f97;
+  cursor: pointer;
+}
+
+.card__content__footer .share-btn:focus {
+  outline: none;
+}
+
+.card__content__footer h4 {
+  margin-bottom: 0.3rem;
+}
+
+.card__content__footer p {
+  color: #9eafc2;
+  font-size: 0.95rem;
+}
+
+.card__content__footer .share-tab {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #48556a;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 50% 20%;
+      grid-template-columns: 30% 50% 20%;
+  padding: 1% 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.card__content__footer .share-tab h4 {
+  color: #9eafc2;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+}
+
+.card__content__footer .share-tab .share-btn {
+  background: #6d7f97;
+  color: #ecf2f8;
+}
+
+.card__content__footer .share-tab .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card__content__footer .share-tab.open {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    padding: 0;
+  }
+  .article-preview {
+    height: auto;
+  }
+  .card {
+    overflow: visible;
+    width: 864px;
+    height: 368px;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+  }
+  .card__image {
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+  .card__content h3 {
+    font-size: 1.7rem;
+    line-height: 1.5;
+  }
+  .card__content__details p {
+    font-size: 1.2rem;
+  }
+  .card__content__footer .avatar {
+    width: 60%;
+  }
+  .card__content__footer .share-tab {
+    width: 50%;
+    height: 70%;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    bottom: 100%;
+    left: 61.5%;
+    padding: 0 5%;
+    border-color: #48556a;
+    border-radius: 1rem;
+  }
+  .card__content__footer .share-tab .share-btn {
+    display: none;
+  }
+  .card__content__footer .share-tab::after {
+    content: '';
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #48556a transparent transparent transparent;
+  }
 }
 /*# sourceMappingURL=main.css.map */
